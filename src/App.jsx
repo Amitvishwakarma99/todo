@@ -5,7 +5,6 @@ import { ToDoProvider } from "./context/ToDoContext";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  
 
   const addToDo = (todo) => {
     setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
@@ -41,15 +40,13 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  
-
   return (
     <>
       <ToDoProvider
         value={{ todos, addToDo, updateToDo, deleteToDo, toggleComplete }}
       >
         <div className="bg-[#363636] flex justify-center w-full h-screen text-[#d7d7d7]">
-          <div className=" w-3/4 flex flex-col items-center">
+          <div className="w-11/12 lg:w-3/4 flex flex-col items-center">
             <h1 className="text-[#36c032] font-bold text-2xl text-center py-4 pt-8 ">
               Write Your ToDo's
             </h1>
