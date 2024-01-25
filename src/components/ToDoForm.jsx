@@ -25,7 +25,7 @@ const ToDoForm = () => {
         />
         <button
           type="submit"
-          className="bg-[#14c50e86] rounded-r-xl px-8 hover:bg-[#30c22bc3] focus:bg-[#a9eba8] focus:text-[#217829] duration-200"
+          className="bg-[#14c50e86] rounded-r-xl px-8 hover:bg-[#30c22bc3] active:bg-[#a9eba8] active:text-[#217829] duration-200"
         >
           Add
         </button>
