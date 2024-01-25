@@ -53,7 +53,7 @@ function App() {
             <div className="py-4 w-full">
               <ToDoForm />
             </div>
-            <div className="w-full py-2">
+            <div className="w-full py-2 overflow-y-auto ">
               {todos.map((todo) => (
                 <div key={todo.id}>
                   <ToDoItem todo={todo} />
