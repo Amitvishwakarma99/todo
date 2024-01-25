@@ -32,9 +32,9 @@ const ToDoItem = ({todo}) => {
         onChange={(e) => setTodoMsg(e.target.value)}
         readOnly={!isTodoEditable}
       />
-      <div className="flex pr-2  ">
+      <div className="flex pr-3 gap-2  ">
         <button
-          className="disabled:opacity-50  w-12 px-2 "
+          className="disabled:opacity-50  "
           onClick={() => {
             if (todo.completed) return;
 
