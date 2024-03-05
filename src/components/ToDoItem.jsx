@@ -27,10 +27,11 @@ const ToDoItem = ({ todo }) => {
       />
       <input
         type="text"
-        className={`bg-transparent rounded-md grow mx-2 py-1 pl-1  text-lg outline-none ${isTodoEditable ? "border" : ""} ${todo.completed ? "line-through" : ""}`}
+        className={`bg-transparent rounded-md grow  mx-2 py-1 pl-1 border-gray-800  text-lg outline-none ${isTodoEditable ? "border-l-2 border-r-2" : ""} ${todo.completed ? "line-through" : ""}`}
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}
         readOnly={!isTodoEditable}
+        spellCheck="false"
       />
       <div className="flex pr-3 gap-2  ">
         <button
