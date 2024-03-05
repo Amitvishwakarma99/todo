@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useToDo } from "../context/ToDoContext";
 
-const ToDoItem = ({todo}) => {
+const ToDoItem = ({ todo }) => {
   const [isTodoEditable, setIsTodoEditable] = useState(false);
   const [todoMsg, setTodoMsg] = useState(todo.todo);
-//   console.log(todoMsg)
+  //   console.log(todoMsg)
   const { updateToDo, deleteToDo, toggleComplete } = useToDo();
 
   const editTodo = () => {
@@ -27,7 +27,7 @@ const ToDoItem = ({todo}) => {
       />
       <input
         type="text"
-        className={`bg-transparent rounded-md grow mx-2 py-1 pl-1 border-black text-lg outline-none ${isTodoEditable ? "border" : ""} ${todo.completed ? "line-through" : ""}`}
+        className={`bg-transparent rounded-md grow mx-2 py-1 pl-1  text-lg outline-none ${isTodoEditable ? "border" : ""} ${todo.completed ? "line-through" : ""}`}
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}
         readOnly={!isTodoEditable}
